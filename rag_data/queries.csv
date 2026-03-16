@@ -1,0 +1,11 @@
+query_id,query_text
+1,How do I install Python on my computer?
+2,What is FAISS and how do I use it for similarity search?
+3,Explain REST API authentication methods
+4,How does retrieval-augmented generation work?
+5,Best practices for database indexing
+6,How to create embeddings for semantic search?
+7,Docker container basics and commands
+8,What is a transformer model in machine learning?
+9,How to set up rate limiting for an API?
+10,Python virtual environment and dependency management
