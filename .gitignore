@@ -1,4 +1,5 @@
-# Jupyter
+# Jupyter — checkpoints in repo root or any subfolder (e.g. ml_evals/.ipynb_checkpoints/)
+**/.ipynb_checkpoints/
 .ipynb_checkpoints/
 .jupyter/
 
