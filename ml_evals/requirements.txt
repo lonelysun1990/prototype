@@ -1,0 +1,36 @@
+# ml_evals.ipynb — install: pip install -r requirements.txt
+#
+# Minimal runtime for most cells: numpy only.
+# Uncomment or trim sections below if you want a smaller env.
+
+# --- Core (used by semantic similarity + bootstrap sections) ---
+numpy>=1.24.0
+
+# --- Hugging Face: overlap metrics & benchmark datasets ---
+evaluate>=0.4.0
+# Backend for evaluate.load("rouge") — not imported in the notebook; omit if pip installs it with evaluate
+rouge-score>=0.1.2
+# Backend for evaluate.load("bleu"); often pulled in with evaluate — install if load fails
+sacrebleu>=2.0.0
+# METEOR via evaluate.load("meteor") — WordNet corpora downloaded at runtime
+nltk>=3.8.0
+datasets>=2.14.0
+
+# --- Semantic similarity & BERTScore (Section 4) ---
+sentence-transformers>=2.2.0
+# Token-level contextual similarity (Transformers checkpoints); used by evaluate.load("bertscore")
+bert-score>=0.3.13
+
+# --- LLM-as-judge & eval frameworks (need API keys; heavier transitive deps) ---
+python-dotenv>=1.0.0
+openai>=1.0.0
+anthropic>=0.40.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# Ragas 0.4.x: requires explicit LangChain LLM wrapper (does NOT auto-use OPENAI_API_KEY)
+ragas>=0.4.0
+langchain-openai>=0.2.0
+
+# DeepEval 4.x: set DEEPEVAL_TELEMETRY_OPT_OUT=YES before importing to skip cloud login
+deepeval>=4.0.0
