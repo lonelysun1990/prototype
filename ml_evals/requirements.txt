@@ -28,9 +28,19 @@ anthropic>=0.40.0
 pandas>=2.0.0
 matplotlib>=3.7.0
 
-# Ragas 0.4.x: requires explicit LangChain LLM wrapper (does NOT auto-use OPENAI_API_KEY)
+# Ragas: llm_factory + LangChain OpenAIEmbeddings for evaluate() (see ml_evals_ragas_deepeval.ipynb)
 ragas>=0.4.0
 langchain-openai>=0.2.0
 
 # DeepEval 4.x: set DEEPEVAL_TELEMETRY_OPT_OUT=YES before importing to skip cloud login
 deepeval>=4.0.0
+
+# --- llm_api_advanced.ipynb ---
+# Token counting for OpenAI (offline, no API call)
+tiktoken>=0.7.0
+# Image encoding for multi-modal cells
+pillow>=10.0.0
+# Retry/backoff for agentic loops
+tenacity>=8.2.0
+# Pydantic for structured output with OpenAI .parse()
+pydantic>=2.0.0
